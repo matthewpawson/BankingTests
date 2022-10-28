@@ -78,10 +78,10 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return String.format("Bank Account | %s", getDetails());
+        return String.format("Bank Account    | %s", getDetails());
     }
 
     public String getDetails() {
-        return String.format("Account Holder: %s | Balance: %.2f |", getAccountHolder(), (double) getBalance() / 100);
+        return String.format("Account Holder: %-15s | Balance: £%.2f", getAccountHolder(), (double) getBalance() / 100);
     }
 }

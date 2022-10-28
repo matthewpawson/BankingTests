@@ -11,11 +11,11 @@ public class Main {
     public static void main(String[] args) throws NegativeInputException, InvalidNameException {
 
         BankAccount birdAccountKupo = new BankAccount(2000, "Kupo Simon");
-        BankAccount birdAccountTonton = new BankAccount(100, "Tonton Simon");
+        BankAccount birdAccountTonton = new BankAccount(1000, "Tonton Simon");
 
-        CurrentAccount currentAccount1 = new CurrentAccount(1000, "Victoria");
+        CurrentAccount currentAccount1 = new CurrentAccount(29000, "Victoria");
         currentAccount1.setInterestRate(1.05);
-        CurrentAccount currentAccount2 = new CurrentAccount(500, "Paul");
+        CurrentAccount currentAccount2 = new CurrentAccount(15000, "Paul");
         currentAccount2.setInterestRate(1.15);
 
         SavingsAccount savingsAccount1 = new SavingsAccount(10000, "Some Person");

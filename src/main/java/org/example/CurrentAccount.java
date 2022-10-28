@@ -41,6 +41,7 @@ public class CurrentAccount extends BankAccount {
 
     @Override
     public String toString() {
-        return String.format("Current Account | %s | Interest Rate: %f |", super.getDetails(), getInterestRate());
+        return String.format("Current Account | %s | Interest Rate: %.0f%%",
+                super.getDetails(), getInterestRate() * 100 - 100);
     }
 }

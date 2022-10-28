@@ -41,6 +41,7 @@ public class SavingsAccount extends BankAccount {
 
     @Override
     public String toString() {
-        return String.format("Savings Account | %s | Maximum Withdrawal: %d |", super.getDetails(), getMaxWithdrawal());
+        return String.format("Savings Account | %s | Maximum Withdrawal: £%.2f", super.getDetails(),
+                (double) getMaxWithdrawal() / 100);
     }
 }
