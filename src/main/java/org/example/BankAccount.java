@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.exceptions.CringeMatt;
-import org.example.exceptions.InvalidNameException;
-import org.example.exceptions.NegativeInputException;
-import org.example.exceptions.NotEnoughMoneyException;
+import org.example.exceptions.*;
 
 public class BankAccount {
     private int balance = 0, minBalance = 0;
@@ -67,7 +64,7 @@ public class BankAccount {
         this.setBalance(this.getBalance() + deposit);
     }
 
-    public void withdraw(int withdraw) throws NegativeInputException, NotEnoughMoneyException {
+    public void withdraw(int withdraw) throws NegativeInputException, NotEnoughMoneyException, OverMaxWithdrawalException {
         if (withdraw < 0) {
             throw new NegativeInputException();
         }

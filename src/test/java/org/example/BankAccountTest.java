@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.exceptions.CringeMatt;
-import org.example.exceptions.InvalidNameException;
-import org.example.exceptions.NegativeInputException;
-import org.example.exceptions.NotEnoughMoneyException;
+import org.example.exceptions.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -90,7 +87,7 @@ public class BankAccountTest {
     }
 
     @Test
-    public void test_withdrawMoneyGood() throws NegativeInputException, NotEnoughMoneyException {
+    public void test_withdrawMoneyGood() throws NegativeInputException, NotEnoughMoneyException, OverMaxWithdrawalException {
         BankAccount account = new BankAccount(10000);
         account.withdraw(2500);
         assertEquals(7500, account.getBalance());
@@ -99,7 +96,7 @@ public class BankAccountTest {
     }
 
     @Test
-    public void test_withdrawMoneyBad() throws NegativeInputException {
+    public void test_withdrawMoneyBad() throws NegativeInputException, OverMaxWithdrawalException  {
         BankAccount account = new BankAccount(10000);
         assertThrows(NotEnoughMoneyException.class, () -> {
             account.withdraw(12500);
