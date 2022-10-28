@@ -21,7 +21,7 @@ public class SavingsAccount extends BankAccount {
         super();
     }
 
-    @Override   
+    @Override
     public void withdraw(int withdraw) throws NegativeInputException, NotEnoughMoneyException, OverMaxWithdrawalException {
         if (withdraw > getMaxWithdrawal())
             throw new OverMaxWithdrawalException();

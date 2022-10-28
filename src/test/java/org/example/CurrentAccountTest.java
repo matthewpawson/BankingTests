@@ -27,12 +27,14 @@ public class CurrentAccountTest {
     }
 
     @Test
-    public void test_setInterestSmall() throws NegativeInputException {
+    public void test_setInterestSmall() throws NegativeInputException, CringeMatt {
         int baseMoney = 200483;
         double small = 1e-323+1;
         CurrentAccount account = new CurrentAccount(baseMoney);
             account.setInterestRate(small);
             assertEquals(small, account.getInterestRate());
+            account.calculateInterest();
+            assertEquals(baseMoney,account.getBalance());
     }
 
     @Test
@@ -59,6 +61,8 @@ public class CurrentAccountTest {
         CurrentAccount account = new CurrentAccount(baseMoney);
         account.setInterestRate(1.1);
         account.calculateInterest();
-        assertEquals(1.1*baseMoney, account.getBalance());
+        assertEquals(Math.round(1.1*baseMoney), account.getBalance());
     }
+
+
 }
