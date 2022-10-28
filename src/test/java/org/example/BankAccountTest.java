@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.exceptions.CringeMatt;
+import org.example.exceptions.InvalidNameException;
+import org.example.exceptions.NegativeInputException;
+import org.example.exceptions.NotEnoughMoneyException;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

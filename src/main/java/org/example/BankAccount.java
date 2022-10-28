@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.exceptions.CringeMatt;
+import org.example.exceptions.InvalidNameException;
+import org.example.exceptions.NegativeInputException;
+import org.example.exceptions.NotEnoughMoneyException;
+
 public class BankAccount {
     private int balance = 0, minBalance = 0;
     private String accountHolder = "default user";
