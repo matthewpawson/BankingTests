@@ -38,4 +38,9 @@ public class SavingsAccount extends BankAccount {
             throw new NegativeInputException();
         this.maxWithdrawal = maxWithdrawal;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Savings Account | %s | Maximum Withdrawal: %d |", super.getDetails(), getMaxWithdrawal());
+    }
 }

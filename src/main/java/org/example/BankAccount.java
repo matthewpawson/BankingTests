@@ -75,4 +75,13 @@ public class BankAccount {
 
         this.setBalance(this.getBalance() - withdraw);
     }
+
+    @Override
+    public String toString() {
+        return String.format("Bank Account | %s", getDetails());
+    }
+
+    public String getDetails() {
+        return String.format("Account Holder: %s | Balance: %.2f |", getAccountHolder(), (double) getBalance() / 100);
+    }
 }

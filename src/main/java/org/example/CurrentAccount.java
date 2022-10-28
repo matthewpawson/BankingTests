@@ -38,4 +38,9 @@ public class CurrentAccount extends BankAccount {
             throw new CringeMatt();
         setBalance((int) Math.round(newBalance));
     }
+
+    @Override
+    public String toString() {
+        return String.format("Current Account | %s | Interest Rate: %f |", super.getDetails(), getInterestRate());
+    }
 }
