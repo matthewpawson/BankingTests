@@ -18,7 +18,7 @@ public class Main {
         CurrentAccount currentAccount2 = new CurrentAccount(15000, "Paul");
         currentAccount2.setInterestRate(1.15);
 
-        SavingsAccount savingsAccount1 = new SavingsAccount(10000, "Some Person");
+        SavingsAccount savingsAccount1 = new SavingsAccount(10000, "A Person");
         savingsAccount1.setMaxWithdrawal(1000);
         SavingsAccount savingsAccount2 = new SavingsAccount(25000, "Another Person");
         savingsAccount2.setMaxWithdrawal(0);
