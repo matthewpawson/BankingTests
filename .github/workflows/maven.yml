@@ -43,7 +43,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: dist-without-markdown
-        path: /home/runner/work/BankingTests/BankingTests/target/
+        path: /home/runner/work/BankingTests/BankingTests/target/*.jar
 
   dependencies:
     runs-on: ubuntu-latest
